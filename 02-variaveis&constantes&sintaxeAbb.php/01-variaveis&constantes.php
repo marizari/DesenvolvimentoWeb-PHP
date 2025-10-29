@@ -22,7 +22,7 @@
         variáveis são usadas para armazenar dados na memória do servidor de forma variável, ou seja, que pode mudar durante a execução do programa.
         */
 
-        $nome = "Maria Eduarda;" // por ter aspas duplas, o PHP entende que é uma string
+        $nome = "Maria Eduarda"; // por ter aspas duplas, o PHP entende que é uma string
         $idade = 19; // por não ter aspas, o PHP entende que é um número inteiro
         $altura = 1.53; // por não ter aspas, e com casas decimais o PHP entende que é um número decimal (float)
 
@@ -40,16 +40,23 @@
 
      maneira mais antiga de declarar constantes, usando a função define()
      - essa função recebe dois parâmetros: o nome da constante (sempre em maiúsculo) e o valor da constante.*/
-        define (PROPRIETARIO, "João Silva"); // função define
+        define(PROPRIETARIO,"João Silva"); // função define
     
     //Segunda maneira/sintaxe de declarar constantes, é usando a palavra reservada const, uma sintaxe mais moderna e recomendada.
     
     const EMPRESA = "Tech Solutions"; // palavra-chave const seguida do nome da constante (sempre em maiúsculo) e o valor da constante.
 
 
+const A = 10;
+const B = 5;
+const SOMA = A + B; 
+echo SOMA;
+
+SOMA = 20; // Isso vai gerar um erro, pois não podemos alterar o valor de uma constante.
 
 
 
+?>
     
 </body>
 </html>

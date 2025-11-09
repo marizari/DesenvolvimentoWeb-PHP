@@ -64,6 +64,28 @@
         </ul>
     
     <h2>Arrays associativos</h2>
+    <!--Arrays associativos são arrays onde os índices são strings, ou seja, nomes ou rótulos que identificam cada elemento do array.-->
+    <!--São usados principalmente p/ manipulaçãp de banco de dados, onde cada registro pode ser representado como um array associativo, com os nomes dos campos como índices. Para que a linguagem possa manipula-lo dentor de uma página web-->
+    <?php
+    //uma chave associativa é declarada da seguinte forma no array associativo:
+        // 1. Sintaxe váriavel 
+        //2. Array associativo com sintaxe de colchetes []
+        //3.Dentro do array, colocar chaves associativas entre aspas simples ou duplas, seguidas do operador => e do valor correspondente.
+        $curso = [
+            // chave associativa: "identificador" => (operador de associação) valor que deseja guardar la dentro
+            //pode colocar qunatas chaves associativas quiser colancando no final a vírgula pra separar
+            "titulo" => "Gastronomia",
+            "carga_horaria" => 1800,
+            "descricao" => "Curso voltado para culinária nacional e internacional."
+        ];
+
+    ?>
+    <h3>Acessando os dados dos array associativos</h3>
+    <p>Nome do curso: <?=$curso["titulo"]?></p>
+    <p>Carga horárias: <?=$curso["carga_horaria"]?> horas.</p>
+    <p>Descrição: <?=$curso["descricao"]?></p>
+    <!-- boa prática, colocar a nomenclatura a variavel do array associativo no singular, pois cada elemento representa um único registro ou objeto.
+     e o nome do array no plural, pois ele representa uma coleção de registros ou objetos.-->
 
     
     

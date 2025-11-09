@@ -60,6 +60,42 @@
         <li>Peso: <?=$usuario->caracteristicas->peso?>kg</li>
     </ul>
 
+    <hr>
+
+    <h2>Convertendo objeto em array</h2>
+    <?php
+    $pedido = new stdClass();
+    $pedido->numero = 1234;
+    $pedido->valor_total = 250.75;
+    $pedido->entrega = 7;
+
+    // Convertendo o objeto em array associativo (casting) 
+    //$arrayPedido = (array): isso que configura o casting a conversão de um tipo de dado para outro. nesse caso, estamos convertendo um objeto para um array. 
+    $arrayPedido = (array) $pedido;
+
+    ?>
+    <h3>Analisando a estrutura do array gerado a partir do objeto</h3>
+    <pre><?=var_dump($pedido)?></pre>
+    <pre><?=var_dump($arrayPedido)?></pre>
+
+    <h2>Convertendo array em objeto</h2>
+
+    <?php
+    //ARRAY ASSOCIATIVO
+    $curso = [
+        "titulo" => "PHP Básico",
+        "carga_horaria" => 1800,
+        "categoria" => "Back-End"
+    ];
+
+    // Convertendo o array em objeto (casting)
+    $objetoCurso = (object) $curso;
+    ?>
+
+    <h3>Analisando a estrutura do objeto gerado a partir do array</h3>
+    <pre><?=var_dump($curso)?></pre>
+    <pre><?=var_dump($objetoCurso)?></pre>
+
 
 
     

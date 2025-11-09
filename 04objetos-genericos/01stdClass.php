@@ -44,6 +44,24 @@
     <h2>Analisando a estutura do objeto</h2>
     <pre><?=var_dump($usuario)?></pre>
 
+    <hr>
+
+    <h2>Acessando e exibindo os dados do objeto</h2>
+    <ul>
+        <!-- Acessando propriedades simples do objeto 
+         -> é usado para acessar as propriedades do objeto -->
+        <li>Nome: <?=$usuario->nome?></li>
+        <li>E-mail: 
+            <a href="mailto:<?=$usuario->email?>"></a>
+            <?=$usuario->email?>
+        </li>
+        <li>Celular: <?=$usuario->telefones[1]?></li>
+        <li>Bairro: <?=$usuario->endereco["bairro"]?></li>
+        <li>Peso: <?=$usuario->caracteristicas->peso?>kg</li>
+    </ul>
+
+
+
     
     
 </body>

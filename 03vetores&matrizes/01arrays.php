@@ -1,109 +1,112 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PHP - Arrays (Vetores e Matrizes)</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>PHP - Arrays (Vetores e Matrizes)</title>
 </head>
 <body>
-    <h1>Trabalhando com Arrays</h1>
-    <hr>
-    <!--Arrays são estruturas de dados que armazenam múltiplos valores em uma única variável.
-    Arrays = coleções de dados.
-    Arrays = Vetores 
-    Vetor é um espaço na memória do computador que armazena uma coleção de valores relacionados.
-    Vetor é um espaço na memoória que pode ser associado a uma variável ou a uma contante é um espaço de uma única dimensão. Essa unica dimensão pode ser dividida em pedaços menores chamados elementos. Cada elemento é identificado por um índice, que indica a posição do elemento dentro do vetor.
-    Matrizes são arrays multidimensionais, ou seja, arrays que contêm outros arrays como seus elementos. Elas são usadas para representar dados em tabelas ou grades, onde cada elemento é acessado por múltiplos índices.Separação de dados. -->
-    <h2>Arryas Numéricos/indexados</h2>
-    <!--Arrays numéricos são arrays onde os índices são números inteiros, começando geralmente do zero. Cada elemento do array é acessado por um índice numérico que representa sua posição no array.-->
-    
+  <h1>Trabalhando com Arrays</h1>
+  <hr>
 
-    <?php
-    //Sintaxe 1: Usando colchetes []
-    $bandas = ["Savatage", "Rush", "Slayes", "Metallica"];
+  <!-- 
+    📘 Arrays são estruturas de dados que armazenam múltiplos valores em uma única variável.
+    🔹 Arrays = coleções de dados.
+    🔹 Vetor = array de uma única dimensão.
+    🔹 Matriz = array de múltiplas dimensões (arrays dentro de arrays).
 
-    //Sintaxe 2: Usando a função array()
-    //O PHP tem milhares de funções internas para manipular arrays. Algumas das mais comuns que outras.
-    // Para mais variadas finalidades inclusive uma categoria só p/ funcões relacionadas a criação e manipulação de arrays.
-    
+    Vetores armazenam uma coleção de valores relacionados, cada um identificado por um índice numérico.
+    Matrizes são usadas quando precisamos representar dados em tabelas ou grades, onde cada elemento é acessado por múltiplos índices.
+  -->
 
-    $cursos = array("Sistemas para Internet","Análise Desenvolvimento de Sistemas", "Redes de Computadores", "Banco de Dados");
+  <h2>📦 Arrays Numéricos / Indexados</h2>
 
-      //O PHP aceita criação de dados/arrays com qualquer tipo de dado, seja ele string, inteiro, float, booleano, objeto, etc. São arrays chamados de heterogêneos, ou seja, eles podem ter elementos de diferentes tipos de dados.
-      
-      // Arrays heterogêneos
-      $coisas = ["Ville", 2112, "<b>Palavra</b>", 253.487]; // Isso pq a liguagem do PHP é dinamica, ou seja, não precisa declarar o tipo de dado da variável.
+  <?php
+    // Sintaxe 1 — usando colchetes []
+    $bandas = ["Savatage", "Rush", "Slayer", "Metallica"];
 
-      // Sintaxe de atribuição manual
-      //Possição do array = indice
-      $comidas[0] = "Pizza";
-      $comidas[1] = "Hambúrguer";
-      $comidas[2] = "Sorvete";
+    // Sintaxe 2 — usando a função array()
+    $cursos = array(
+      "Sistemas para Internet",
+      "Análise e Desenvolvimento de Sistemas",
+      "Redes de Computadores",
+      "Banco de Dados"
+    );
 
-      // Constantes com arrays
-      //Tem duas maneiras de criar constantes com arrays no PHP:
-      //1. Usando a função define(), mais antiga
-        define("FRUTAS", ["Banana","Maçã", "Laranja"]); //DETALHE: Nome da contante maiúsculo por convenção, o valor da constante
-        //ou
-        define("FILIAIS", array("São Paulo", "Rio de Janeiro", "Belo Horizonte"));
+    // Arrays heterogêneos — podem conter diferentes tipos de dados
+    $coisas = ["Ville", 2112, "<b>Palavra</b>", 253.487];
 
-    //2. Usando a função const, mais usada
+    // Atribuição manual de índices
+    $comidas[0] = "Pizza";
+    $comidas[1] = "Hambúrguer";
+    $comidas[2] = "Sorvete";
+
+    // Constantes com arrays
+    // Forma antiga — define()
+    define("FRUTAS", ["Banana", "Maçã", "Laranja"]);
+    define("FILIAIS", ["São Paulo", "Rio de Janeiro", "Belo Horizonte"]);
+
+    // Forma moderna — const
     const ROUPAS = ["Morango", "Abacaxi"];
+  ?>
 
+  <h3>🧩 Acessando os dados dos arrays indexados</h3>
+  <p>Para acessar os dados, usamos o nome do array seguido do índice entre colchetes <code>[]</code>.</p>
 
-    ?>
+  <ul>
+    <li>Banda que mais gosto: <?=$bandas[1]?></li>
+    <li>Eu faço faculdade de <?=$cursos[0]?></li>
+    <li>Exemplo de texto com HTML: <?=$coisas[2]?></li>
+    <li><?=$comidas[0]?> é muito bom e <?=ROUPAS[1]?> também!</li>
+    <li>Filiais: <?=implode(", ", FILIAIS)?></li>
+  </ul>
 
-        <h3>Acessando os dados dos arrys indexados</h3>
-        <!--Para acessar os dados dos arrays indexados, usamos o nome do array seguido do índice entre colchetes. Lembrando que os índices começam em 0.-->
-        <ul>
-            <li>Banda que mais gosto: <?=$bandas[1]?></li>
-            <li>Eu faço falculdade de <?=$cursos[0]?></li>
-            <li>Exemplo de texto com HTML: <?=$coisas[2]?></li>
-            <li><?=$comidas[0]?> muito bom e <?=ROUPAS[1]?></li>
-            <li>Filial é a <?=FILIAIS?></li>
-        </ul>
-    
-    <h2>Arrays associativos</h2>
-    <!--Arrays associativos são arrays onde os índices são strings, ou seja, nomes ou rótulos que identificam cada elemento do array.-->
-    <!--São usados principalmente p/ manipulaçãp de banco de dados, onde cada registro pode ser representado como um array associativo, com os nomes dos campos como índices. Para que a linguagem possa manipula-lo dentor de uma página web-->
-    <?php
-    //uma chave associativa é declarada da seguinte forma no array associativo:
-        // 1. Sintaxe váriavel 
-        //2. Array associativo com sintaxe de colchetes []
-        //3.Dentro do array, colocar chaves associativas entre aspas simples ou duplas, seguidas do operador => e do valor correspondente.
-        $curso = [
-            // chave associativa: "identificador" => (operador de associação) valor que deseja guardar la dentro
-            //pode colocar qunatas chaves associativas quiser colancando no final a vírgula pra separar
-            "titulo" => "Gastronomia",
-            "carga_horaria" => 1800,
-            "descricao" => "Curso voltado para culinária nacional e internacional."
-        ];
-        // Constantes com arrays associativos
-        define("EMPRESA", [
-            "nome" => "Tech Solutions",
-            "ramo" => "TI"
-        ]);
+  <hr>
+  <h2>📂 Arrays Associativos</h2>
 
-        //outra forma de criar constante com array associativo
-        const PROPRIETARIO = [
-            "nome" => "Jon Oliva",
-            "idade" => 62
-        ];
+  <!--
+    Arrays associativos usam chaves nomeadas (strings) em vez de índices numéricos.
+    São muito usados em banco de dados, pois cada registro pode ser representado como um array associativo,
+    com as chaves sendo os nomes dos campos.
+  -->
 
-    ?>
+  <?php
+    // Criando um array associativo
+    $curso = [
+      "titulo" => "Gastronomia",
+      "carga_horaria" => 1800,
+      "descricao" => "Curso voltado para culinária nacional e internacional."
+    ];
 
+    // Constante com array associativo usando define()
+    define("EMPRESA", [
+      "nome" => "Tech Solutions",
+      "ramo" => "TI"
+    ]);
 
-    <h3>Acessando os dados dos array associativos</h3>
-    <p>Nome do curso: <?=$curso["titulo"]?></p>
-    <p>Carga horárias: <?=$curso["carga_horaria"]?> horas.</p>
-    <p>Descrição: <?=$curso["descricao"]?></p>
-    <p>Empresa: <?=EMPRESA["nome"]?></p>
-    <p>CEO: <?=PROPRIETARIO["nome"]?></p>
-    <!-- boa prática, colocar a nomenclatura a variavel do array associativo no singular, pois cada elemento representa um único registro ou objeto.
-     e o nome do array no plural, pois ele representa uma coleção de registros ou objetos.-->
+    // Constante com array associativo usando const
+    const PROPRIETARIO = [
+      "nome" => "Jon Oliva",
+      "idade" => 62
+    ];
+  ?>
 
-   
-    
-    
+  <h3>🔍 Acessando os dados dos arrays associativos</h3>
+
+  <p>Nome do curso: <?=$curso["titulo"]?></p>
+  <p>Carga horária: <?=$curso["carga_horaria"]?> horas.</p>
+  <p>Descrição: <?=$curso["descricao"]?></p>
+  <p>Empresa: <?=EMPRESA["nome"]?></p>
+  <p>CEO: <?=PROPRIETARIO["nome"]?></p>
+
+  <hr>
+  <h3>💡 Boas práticas</h3>
+  <ul>
+    <li>Use nomes no <strong>singular</strong> para variáveis que representam um único item (ex: <code>$curso</code>).</li>
+    <li>Use nomes no <strong>plural</strong> para variáveis que representam coleções (ex: <code>$cursos</code>).</li>
+    <li>Evite misturar muitos tipos de dados no mesmo array — use arrays heterogêneos apenas quando fizer sentido.</li>
+  </ul>
+
 </body>
 </html>

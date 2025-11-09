@@ -100,6 +100,39 @@
   <p>Empresa: <?=EMPRESA["nome"]?></p>
   <p>CEO: <?=PROPRIETARIO["nome"]?></p>
 
+  <h2>Arrays aninhados (Matriz)</h2>
+    <!--
+        Arrays aninhados são arrays dentro de arrays.
+        Permitem representar estruturas de dados mais complexas, como tabelas.
+        são arrays que contêm outros arrays como elementos.
+        São úteis para representar dados mais complexos, como tabelas ou listas de registros.
+    -->
+
+    <?php
+      // Criando uma matriz (array de arrays)
+        $planoDeEstudos = [
+            ["JS Avançado", "Node.js", "React", "Next.js"], // indice 0, quantidade de arrys dentro do indice 0 é 4
+            ["PHP Básico", "MySQL", "Laravel"], // indice 1, quantidade de arrys dentro do indice 1 é 3
+            ["HTML5", "CSS3", "Design Responsivo"] // indice 2, quantidade de arrys dentro do indice 2 é 3
+        ];
+
+        //OU pode ser criado assim: MAIS ORGANIZADO
+        $planoDeEstudos2 = [
+            "Front-end" => ["JS Avançado", "Node.js", "React", "Next.js"],
+            "Back-end" => ["PHP Básico", "MySQL", "Laravel"],
+            "Web Design" => ["HTML5", "CSS3", "Design Responsivo"]
+        ];
+
+        ?>
+        <h3>Acessando os dados da matriz indexados</h3>
+        <p>Vou estudar nos próximos meses:
+            <?= $planoDeEstudos[0][2]?> e <?= $planoDeEstudos[0][3]?> no Front-end, e 
+            <?= $planoDeEstudos[1][0]?> e <?= $planoDeEstudos[1][2]?> no Back-end
+        </p>
+        <h3>Acessando os dados do planoDeEsutudos2 (matriz indexados)</h3>
+        <p>Vou estudar nos próximos meses:
+            <?= $planoDeEstudos2["Front-end"][2]?> e <?= $planoDeEstudos2["Front-end"][3]?> no Front-end, e 
+            <?= $planoDeEstudos2["Back-end"][0]?> e <?= $planoDeEstudos2["Back-end"][2]?> no Back-end
   <hr>
   <h3>💡 Boas práticas</h3>
   <ul>

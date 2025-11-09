@@ -11,7 +11,7 @@
   <hr>
 
   <!-- 
-    📘 Arrays são estruturas de dados que armazenam múltiplos valores em uma única variável.
+    Arrays são estruturas de dados que armazenam múltiplos valores em uma única variável.
     🔹 Arrays = coleções de dados.
     🔹 Vetor = array de uma única dimensão.
     🔹 Matriz = array de múltiplas dimensões (arrays dentro de arrays).
@@ -20,7 +20,7 @@
     Matrizes são usadas quando precisamos representar dados em tabelas ou grades, onde cada elemento é acessado por múltiplos índices.
   -->
 
-  <h2>📦 Arrays Numéricos / Indexados</h2>
+  <h2>Arrays Numéricos / Indexados</h2>
 
   <?php
     // Sintaxe 1 — usando colchetes []
@@ -51,7 +51,7 @@
     const ROUPAS = ["Morango", "Abacaxi"];
   ?>
 
-  <h3>🧩 Acessando os dados dos arrays indexados</h3>
+  <h3> Acessando os dados dos arrays indexados</h3>
   <p>Para acessar os dados, usamos o nome do array seguido do índice entre colchetes <code>[]</code>.</p>
 
   <ul>
@@ -63,7 +63,7 @@
   </ul>
 
   <hr>
-  <h2>📂 Arrays Associativos</h2>
+  <h2>Arrays Associativos</h2>
 
   <!--
     Arrays associativos usam chaves nomeadas (strings) em vez de índices numéricos.
@@ -92,7 +92,7 @@
     ];
   ?>
 
-  <h3>🔍 Acessando os dados dos arrays associativos</h3>
+  <h3>Acessando os dados dos arrays associativos</h3>
 
   <p>Nome do curso: <?=$curso["titulo"]?></p>
   <p>Carga horária: <?=$curso["carga_horaria"]?> horas.</p>
@@ -116,7 +116,34 @@
             ["HTML5", "CSS3", "Design Responsivo"] // indice 2, quantidade de arrys dentro do indice 2 é 3
         ];
 
-        //OU pode ser criado assim: MAIS ORGANIZADO
+        ?>
+        <hr>
+
+        <h3>Acessando os dados da matriz aninhados (Matriz Indexados)</h3>
+        <p>Vou estudar nos próximos meses:
+            <?= $planoDeEstudos[0][2]?> e <?= $planoDeEstudos[0][3]?> no Front-end, e 
+            <?= $planoDeEstudos[1][0]?> e <?= $planoDeEstudos[1][2]?> no Back-end
+        </p>
+  <hr>
+<?php
+    //Matriz c/ arrays aninhados associativos
+    $clientes = [
+        [
+          "nome" => "Ana Silva",
+          "email" => "ana@gmail.com"
+        ],
+        [
+            "nome" => "Bruno Souza",
+            "email" => "bruno@gmail.com"
+        ]
+    ];
+?>
+    <h3>Acessando os dados da matriz de arryas associativos</h3>
+    <p>O cliente <?=$clientes[0]["nome"]?> e o cliente <?=$clientes[1]["nome"]?> são muito famosos.</p>
+
+    <hr>
+<?php
+//matriz indexados com chaves nomeadas (associativos)
         $planoDeEstudos2 = [
             "Front-end" => ["JS Avançado", "Node.js", "React", "Next.js"],
             "Back-end" => ["PHP Básico", "MySQL", "Laravel"],
@@ -124,17 +151,15 @@
         ];
 
         ?>
-        <h3>Acessando os dados da matriz indexados</h3>
-        <p>Vou estudar nos próximos meses:
-            <?= $planoDeEstudos[0][2]?> e <?= $planoDeEstudos[0][3]?> no Front-end, e 
-            <?= $planoDeEstudos[1][0]?> e <?= $planoDeEstudos[1][2]?> no Back-end
-        </p>
-        <h3>Acessando os dados do planoDeEsutudos2 (matriz indexados)</h3>
+        <hr>
+        <h3>Acessando os dados da matriz aninhados associativos c/ chaves nomeadas</h3>
         <p>Vou estudar nos próximos meses:
             <?= $planoDeEstudos2["Front-end"][2]?> e <?= $planoDeEstudos2["Front-end"][3]?> no Front-end, e 
             <?= $planoDeEstudos2["Back-end"][0]?> e <?= $planoDeEstudos2["Back-end"][2]?> no Back-end
   <hr>
-  <h3>💡 Boas práticas</h3>
+?>
+
+  <h3>Boas práticas</h3>
   <ul>
     <li>Use nomes no <strong>singular</strong> para variáveis que representam um único item (ex: <code>$curso</code>).</li>
     <li>Use nomes no <strong>plural</strong> para variáveis que representam coleções (ex: <code>$cursos</code>).</li>

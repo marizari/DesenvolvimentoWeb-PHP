@@ -78,15 +78,31 @@
             "carga_horaria" => 1800,
             "descricao" => "Curso voltado para culinária nacional e internacional."
         ];
+        // Constantes com arrays associativos
+        define("EMPRESA", [
+            "nome" => "Tech Solutions",
+            "ramo" => "TI"
+        ]);
+
+        //outra forma de criar constante com array associativo
+        const PROPRIETARIO = [
+            "nome" => "Jon Oliva",
+            "idade" => 62
+        ];
 
     ?>
+
+
     <h3>Acessando os dados dos array associativos</h3>
     <p>Nome do curso: <?=$curso["titulo"]?></p>
     <p>Carga horárias: <?=$curso["carga_horaria"]?> horas.</p>
     <p>Descrição: <?=$curso["descricao"]?></p>
+    <p>Empresa: <?=EMPRESA["nome"]?></p>
+    <p>CEO: <?=PROPRIETARIO["nome"]?></p>
     <!-- boa prática, colocar a nomenclatura a variavel do array associativo no singular, pois cada elemento representa um único registro ou objeto.
      e o nome do array no plural, pois ele representa uma coleção de registros ou objetos.-->
 
+   
     
     
 </body>

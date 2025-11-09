@@ -27,7 +27,7 @@
     // Para mais variadas finalidades inclusive uma categoria só p/ funcões relacionadas a criação e manipulação de arrays.
     
 
-    $cursos = array("Sistemas para Internet,'Análise e Desenvolvimento de Sistemas", "Redes de Computadores", "Banco de Dados");
+    $cursos = array("Sistemas para Internet","Análise Desenvolvimento de Sistemas", "Redes de Computadores", "Banco de Dados");
 
       //O PHP aceita criação de dados/arrays com qualquer tipo de dado, seja ele string, inteiro, float, booleano, objeto, etc. São arrays chamados de heterogêneos, ou seja, eles podem ter elementos de diferentes tipos de dados.
       
@@ -52,6 +52,16 @@
 
 
     ?>
+
+        <h3>Acessando os dados dos arrys indexados</h3>
+        <!--Para acessar os dados dos arrays indexados, usamos o nome do array seguido do índice entre colchetes. Lembrando que os índices começam em 0.-->
+        <ul>
+            <li>Banda que mais gosto: <?=$bandas[1]?></li>
+            <li>Eu faço falculdade de <?=$cursos[0]?></li>
+            <li>Exemplo de texto com HTML: <?=$coisas[2]?></li>
+            <li><?=$comidas[0]?> muito bom e <?=ROUPAS[1]?></li>
+            <li>Filial é a <?=FILIAIS?></li>
+        </ul>
     
     <h2>Arrays associativos</h2>
 

@@ -157,7 +157,25 @@
             <?= $planoDeEstudos2["Front-end"][2]?> e <?= $planoDeEstudos2["Front-end"][3]?> no Front-end, e 
             <?= $planoDeEstudos2["Back-end"][0]?> e <?= $planoDeEstudos2["Back-end"][2]?> no Back-end
   <hr>
-?>
+  
+  <h2>Funções de análise/depuração/degub de estruturas dados</h2>
+    <!-- vai ser demontrado em exemplos de array mas vale para qualquer estrutura de dados com ex objeto, string, etc-->
+  <span>Depurando arrays com print_r e var_dump</span>
+  <!--o php disponibiliza duas funções nativas para depurar arrays: print_r() e var_dump(). p/ não ficar dependendo do echo p/ exibir os valores dos arrays, podemos usar essas funções a tags-->
+
+  <h3><code>print_r()</code></h3>
+  <pre><?=print_r($planoDeEstudos)?></pre>
+    <!-- A função print_r() exibe uma representação legível de uma variável, mostrando seus valores e estrutura de forma simples. -->
+     <!-- e pra não oficar bagunçado usar pre tags. A tag <pre> preserva espaços e quebras de linha, facilitando a leitura da saída formatada.-->
+
+  <h3><code>var_dump()</code></h3>
+    <pre><?=var_dump($planoDeEstudos)?></pre>
+    <!-- A função var_dump() fornece informações detalhadas sobre uma variável, incluindo seu tipo e valor, sendo útil para depuração mais aprofundada. -->
+     
+
+  <!--Usamos essas funções para inspecionar o conteúdo e a estrutura dos arrays durante o desenvolvimento.-->
+
+
 
   <h3>Boas práticas</h3>
   <ul>

@@ -11,6 +11,16 @@
 
     <h2 style="font-size: 14">Condicional SIMPLES: <code>if (se)</code></h2>
     <?php
+    /*Operadores RELACIONAIS (de comparação): muito usados em estruturas condicionais
+    ==  Igualdade de valor 
+    === Igualdade de valor e tipo de dado
+    != ou <> (mesma finalidade)  Diferente
+    >   Maior que
+    <   Menor que
+    >=  Maior ou igual a
+
+
+
         $numero = 50;
         //Estrutura condicional simples
         if($numero > 10){ //ou :

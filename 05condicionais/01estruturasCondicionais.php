@@ -141,6 +141,18 @@
         ?>
             <hr>
 
+            <h2>Sobre os Operadores <code>==</code> e <code>===</code></h2>
+            <?php 
+            $a = 10; //int
+            $b = '10'; //string
+
+            // == avalia SOMENTE O VALOR NÃO IMPORTA O TIPO DE DADO
+            var_dump($a == $b); //true
+
+            echo "<br>";
+
+            // === avalia VALOR E também o TIPO, os dois valores tem que ser a mesma coisa p/ ser igual
+            var_dump($a === $b); //false
 
             
 ?>

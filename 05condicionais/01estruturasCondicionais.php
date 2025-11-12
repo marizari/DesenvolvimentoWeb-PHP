@@ -89,6 +89,25 @@
         echo "<p>Estoque Normal.</p>";
     }
     ?>
-    <hr>
+     <hr>
+
+      <h2>Condicional ENCADEADA: <code>if/elseif/else</code></h2>
+
+      <?php 
+      //elseif = caso contrário
+      $idade = 25;
+      if ($idade <= 12) {
+        echo "<p>Criança</p>";
+      } elseif($idade <= 17) {
+         echo "<p>Adolecente</p>";
+      } elseif($idade <= 59){
+         echo "<p>Adulto</p>";
+      } else {
+         echo "<p>Idoso</p>";
+      }
+
+      ?>
+
+        
 </body>
 </html>

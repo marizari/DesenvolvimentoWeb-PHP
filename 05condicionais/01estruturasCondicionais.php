@@ -107,7 +107,43 @@
       }
 
       ?>
+    
+        <h3>Condicional Encadeada agora usando: <code>switch/case/default/break</code></h3>
+        <?php 
+        /*Protótipo de chatbot 
+        Opções válidas:
+        1 -> Pedir informações
+        2 -> Fazer reclamação
+        3 -> Fazer elogio
+        x -> Inválida; falar com o atendente
+        */
+        
+        //Entra da opção
+        $opcao = 1;
+        //switch = escolha-caso
+        switch($opcao){
+            case 1:
+               echo "<p>Legal, o que deseja saber?</p>";
+               break;
+            
+            case 2:
+                echo "<p>Puxa, me conte o que aconteceu</p>";
+                break;
 
+            case 3:
+                echo "<p>Que bacana, pode falar!</p>";
+                break;
+
+            default:
+                echo "<p>Hum, não entendi.. Vou chamar um humano</p>";
+                break; //break = pare, exemplo case faca isso break e pare
+        }
+        ?>
+            <hr>
+
+
+            
+?>
         
 </body>
 </html>

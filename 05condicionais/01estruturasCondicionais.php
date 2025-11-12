@@ -153,9 +153,29 @@
 
             // === avalia VALOR E também o TIPO, os dois valores tem que ser a mesma coisa p/ ser igual
             var_dump($a === $b); //false
-
-            
 ?>
+
+        <hr>
+
+        <h2>Dica: usando condicional composta c/ shorthand <code>if/else</code></h2>
+        <?php 
+        // Versão tradicional if/else
+        //obs: usando a mesma variavel de exemplos antoriores
+        /*if($idaade >= 18){
+            $mensagem = "maior";
+        }else {
+            $mensagem = "menor";
+        }
+        echo $mensagem;*/
+
+        // Versão usando if/else abreviado com o operador ternário
+        // A estrutura funciona assim: (condição) ? valor_se_verdadeiro : valor_se_falso
+        // Ou seja: se $idade for maior ou igual a 18, armazena "maior"; senão, armazena "menor"
+        // ?: Esses são conhecidos como operadores ternários
+        $mensagem = $idade >= 18 ? "maior" : "menor";
+        //
+        echo $mensagem;
+        ?>
         
 </body>
 </html>
